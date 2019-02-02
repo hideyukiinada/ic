@@ -1,34 +1,25 @@
 """
-An web app.
+An image classification web app.
 
 __author__ = "Hide Inada"
-__copyright__ = "Copyright 2018, Hide Inada"
+__copyright__ = "Copyright 2019, Hide Inada"
 __license__ = "The MIT License"
 __email__ = "hideyuki@gmail.com"
 """
-from flask import Flask
-from flask import render_template
-from flask import request
-from flask import redirect
-from flask import jsonify
-from flask import url_for
-
-import sys
-
-#sys.path.append("..")  # To include tools. Note that this is relative to start.sh, and not __init__.py
 
 import os
 import logging
 from pathlib import Path
+from flask import Flask
+from flask import render_template
+from flask import request
+from flask import jsonify
+from werkzeug.utils import secure_filename
 import numpy as np
-
 import tensorflow
 import tensorflow.keras.applications.resnet50
 import tensorflow.keras.preprocessing
-
 from PIL import Image
-
-from werkzeug.utils import secure_filename
 
 IMAGE_HEIGHT = 224
 IMAGE_WIDTH = 224
@@ -46,13 +37,25 @@ save_path = Path(SAVE_DIR)
 if save_path.exists() is False:
     save_path.mkdir(parents=True, exist_ok=True)
 
+
 @app.route('/')
 def root():
+    """
+    Handle the initial request to the root route.
+    """
     return render_template('main.html')
+
 
 @app.route('/upload_image', methods=['POST'])
 def upload_image():
+    """
+    Process the uploaded image and classify using a Keras model.
 
+    Returns
+    -------
+    output: json data
+        JSON dictionary containing list of top 3 names and probability for each name.
+    """
     image_file = request.files['file']
     log.debug(image_file)
 
@@ -71,7 +74,7 @@ def upload_image():
         y_hat = model.predict(x)
         top3 = tensorflow.keras.applications.resnet50.decode_predictions(y_hat, top=3)[0]
         names = list(map(lambda e: e[1], top3))
-        probs = list(map(lambda e: str(round(e[2]*100, 1)) + "%", top3))
+        probs = list(map(lambda e: str(round(e[2] * 100, 1)) + "%", top3))
 
     return jsonify({
         "name": names,
