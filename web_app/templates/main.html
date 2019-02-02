@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename = 'css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename = 'css/basic.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename = 'css/dropzone.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/ic_main.css') }}">
 </head>
 
 <body>
@@ -27,6 +26,7 @@
             <form action="/upload_image"
                   class="dropzone"
                   id="myAwesomeDropzone">
+                    <div class="dz-message" data-dz-message><span>Drag & drop a photo that you want to classify into this area.</span></div>
             </form>
 
         </div>

@@ -1,4 +1,3 @@
 #!/bin/bash
 
-export FLASK_APP=./__init__.py
-flask run
+python ./__init__.py

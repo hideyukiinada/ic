@@ -43,6 +43,8 @@ save_path = Path(SAVE_DIR)
 if save_path.exists() is False:
     save_path.mkdir(parents=True, exist_ok=True)
 
+def main():
+    app.run(host='0.0.0.0')
 
 @app.route('/')
 def root():
@@ -86,3 +88,7 @@ def upload_image():
         "name": names,
         "probability": probs
     })
+
+
+if __name__ == "__main__":
+    main()
