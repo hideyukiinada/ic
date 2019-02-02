@@ -28,34 +28,42 @@
 
             <form action="/upload_image"
                   class="dropzone"
-                  id="myAwesomeDropzone"></form>
+                  id="myAwesomeDropzone">
+            </form>
 
         </div>
 
     </div>
 
     <div class="card-footer text-muted">
-        <form style="position: relative;">
-            <button type="button" class="btn btn-primary" id="clear" value="clear">Clear</button>
-        </form>
+        <button type="button" class="btn btn-primary" id="clear" value="clear">Clear</button>
     </div>
 
+    <table id="classification" class="table">
+        <tr>
+            <th></th>
+            <th>Class</th>
+            <th>Probability</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><p id="name1"></p></td>
+            <td><p id="prob1"></p></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><p id="name2"></p></td>
+            <td><p id="prob2"></p></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><p id="name3"></p></td>
+            <td><p id="prob3"></p></td>
+        </tr>
+    </table>
+
+
 </div>
-<hr>
-<table>
-    <tr>
-        <td><p id="name1"></p></td>
-        <td><p id="prob1"></p></td>
-    </tr>
-    <tr>
-        <td><p id="name2"></p></td>
-        <td><p id="prob2"></p></td>
-    </tr>
-    <tr>
-        <td><p id="name3"></p></td>
-        <td><p id="prob3"></p></td>
-    </tr>
-</table>
 
 
 <script src="{{ url_for('static', filename = 'js/jquery-3.3.1.min.js') }}"></script>
