@@ -1,6 +1,12 @@
 """
 An image classification web app.
 
+References
+----------
+Keras team, Classify ImageNet classes with ResNet50, https://keras.io/applications/#classify-imagenet-classes-with-resnet50
+Pallets Team, Uploading Files, http://flask.pocoo.org/docs/1.0/patterns/fileuploads/
+Satyajit, Answer to Tensor is not an element of this graph; deploying Keras model, https://stackoverflow.com/questions/51127344/tensor-is-not-an-element-of-this-graph-deploying-keras-model
+
 __author__ = "Hide Inada"
 __copyright__ = "Copyright 2019, Hide Inada"
 __license__ = "The MIT License"
