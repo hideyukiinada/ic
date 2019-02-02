@@ -3,6 +3,8 @@ Dropzone.options.myAwesomeDropzone = {
     this.on("success", function(file, serverResponse) { // Called after the file successfully uploaded.
 
     // Populate classification fields
+    $('#classification').show();
+
     $("#name1").text(serverResponse["name"][0]);
     $("#name2").text(serverResponse["name"][1]);
     $("#name3").text(serverResponse["name"][2]);
@@ -16,8 +18,13 @@ Dropzone.options.myAwesomeDropzone = {
 
 $(document).ready(function(){
 
+    $('#classification').hide();
+
     // Clear button event handler
     $('#clear').click(function() {
+
+        $('#classification').hide();
+
         // Clear all fields that contain name and prob in id field.
         $("[id*=name]").text("");
         $("[id*=prob]").text("");
