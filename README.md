@@ -29,7 +29,7 @@ correctly because you can see the other side of the river, which would not be th
 
 <IMG src="assets/images/river.png" height="400px">
 
-The below picture has a flower, but the flower does not appear in the top 3.  It lists a vase on #3, so it was not a complete misclassification.
+The below picture has a flower, but the flower does not appear in the top 3. The vase does not have a narrow neck like a goblet, so the goblet is not right. Beaker would be wider than this. It still lists a vase on #3, so there is some hope.
 
 <IMG src="assets/images/flowervase.png" height="400px">
 
