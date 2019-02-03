@@ -2,7 +2,7 @@
 By Hide Inada
 
 If you are a photographer, you may have seen AI-enabled auto-classification for tagging a photo when you upload a photo to a stock photo agency.
-If you want to build a basic version of classification using the classes contained in pretrained weights, you can do it with very little code.
+If you want to build a basic version of AI image classification system using the classes contained in pretrained weights, you can do it with very little code.
 I implemented an image classification that classifies a photo into 1000 classes. I used ResNet50 as the ML backend with pre-trained weights and used Flask as the web frontend.
 ResNet50 model with pre-trained weights has 74.9% accuracy according to [a Keras's web page](https://keras.io/applications/) for predicting the top 1 object in a photo.
 I ran the photos that I took by the system to see how it classifies. Please see the result at the end of this article.
