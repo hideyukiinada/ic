@@ -20,8 +20,11 @@ Drag & drop a photo from your file manager (e.g. Finder) into the rectangular ar
 
 # Code
 Entire code is checked in [https://github.com/hideyukiinada/ic/tree/master/web_app](https://github.com/hideyukiinada/ic/tree/master/web_app)
+
 The key part of the code is where it loads the ResNet50 model and predicts classes:
 [https://github.com/hideyukiinada/ic/blob/master/web_app/__init__.py](https://github.com/hideyukiinada/ic/blob/master/web_app/__init__.py)
+
+The code is so short, and you may think "is this it?" ;-)
 
 ## Samples of images
 I used the photos from my portfolio to test how the classifier classifies my photos.
