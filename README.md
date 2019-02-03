@@ -1,7 +1,7 @@
 # ic
 Image Classification
 
-<IMG src="assets/images/bear.png" height="200px">
+<IMG src="assets/images/bear.png" height="400px">
 ![Espresso drink](assets/images/bespressodrink.png)
 ![Tablelamp](assets/images/lamp.png)		
 ![Sacramento River](assets/images/river.png)		
