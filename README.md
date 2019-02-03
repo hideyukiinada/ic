@@ -10,6 +10,7 @@ ResNet50 model with pre-trained weights has 74.9% accuracy according to [a Keras
 I used the photos from my portfolio to test how the classifier classifies my photos.
 
 ### Success cases
+Classification for exotic animals and some household items worked well:
 <IMG src="assets/images/lion.png" height="400px">	
 <IMG src="assets/images/bear.png" height="400px">
 <IMG src="assets/images/tiger.png" height="400px">
@@ -22,7 +23,11 @@ I used the photos from my portfolio to test how the classifier classifies my pho
 <IMG src="assets/images/speedlimitsign.png" height="400px">
 
 ### Incorrect cases
-This is a picture of Sacramento River, but the system classified as the lake.
+This is a picture of Sacramento River, but the system classified as the lake.  I think in this case, human would have guessed 
+correctly because you can see the other side of the river, which would not be the case for a lake.
+
 <IMG src="assets/images/river.png" height="400px">
+
+The below picture has a flower, but the flower does not appear in the top 3.  It lists a vase on #3, so it was not a complete misclassification.
 <IMG src="assets/images/flowervase.png" height="400px">
 
