@@ -2,6 +2,7 @@
 Image Classification
 
 ## Samples of images
+I used the photos from my portfolio to test how the classifier classifies my photos.
 
 ### Success cases
 <IMG src="assets/images/lion.png" height="400px">	
