@@ -18,7 +18,9 @@ When you access the above URL, you should see the below screen:
 Drag & drop a photo from your file viewer (e.g. Finder) into the rectangular area.  Once the photo is dropped, it automatically uploads the image to my AWS instance for classification.  The result is returned on the same page so there is no need for you to do anything else.  If you want to try classifying more images, just hit the "Clear" button.
 
 # Code
-
+Entire code is checked in [https://github.com/hideyukiinada/ic/tree/master/web_app](https://github.com/hideyukiinada/ic/tree/master/web_app)
+The key part of the code is where it loads the ResNet50 model and predicts classes:
+[https://github.com/hideyukiinada/ic/blob/master/web_app/__init__.py](https://github.com/hideyukiinada/ic/blob/master/web_app/__init__.py)
 
 ## Samples of images
 I used the photos from my portfolio to test how the classifier classifies my photos.
