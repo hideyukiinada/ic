@@ -23,7 +23,7 @@ Drag & drop a photo from your file manager (e.g. Finder) into the rectangular ar
 ## Code
 Entire code is checked in [https://github.com/hideyukiinada/ic/tree/master/web_app](https://github.com/hideyukiinada/ic/tree/master/web_app)
 
-The key part of the code is where it loads the ResNet50 model and predicts classes:
+The key part of the code is a section that loads the ResNet50 model and predicts classes:
 [https://github.com/hideyukiinada/ic/blob/master/web_app/__init__.py](https://github.com/hideyukiinada/ic/blob/master/web_app/__init__.py)
 
 The code is so short, and you may think "is this it?" ;-)
@@ -46,7 +46,7 @@ Classification for exotic animals and some household items worked well:
 <IMG src="assets/images/speedlimitsign.png" height="400px">
 
 ### Incorrect cases
-This is a picture of Sacramento River, but the system classified as the lake.  I think in this case, human would have guessed 
+This is a picture of Sacramento River, but the system classified as the lakeside.  I think in this case, human would have guessed 
 correctly because you can see the other side of the river, which would not be the case for a lake.
 
 <IMG src="assets/images/river.png" height="400px">
