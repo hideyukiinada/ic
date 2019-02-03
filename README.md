@@ -11,6 +11,10 @@ I deployed an instance on AWS and it is available for you to check out:
 
 [http://ec2-3-83-93-180.compute-1.amazonaws.com:5000/](http://ec2-3-83-93-180.compute-1.amazonaws.com:5000/)
 
+# How to use the deployment instance
+
+<IMG src="assets/images/initialscreen.png" height="400px">	
+
 ## Samples of images
 I used the photos from my portfolio to test how the classifier classifies my photos.
 
