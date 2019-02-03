@@ -11,6 +11,7 @@ I used the photos from my portfolio to test how the classifier classifies my pho
 
 ### Success cases
 Classification for exotic animals and some household items worked well:
+
 <IMG src="assets/images/lion.png" height="400px">	
 <IMG src="assets/images/bear.png" height="400px">
 <IMG src="assets/images/tiger.png" height="400px">
@@ -29,5 +30,6 @@ correctly because you can see the other side of the river, which would not be th
 <IMG src="assets/images/river.png" height="400px">
 
 The below picture has a flower, but the flower does not appear in the top 3.  It lists a vase on #3, so it was not a complete misclassification.
+
 <IMG src="assets/images/flowervase.png" height="400px">
 
