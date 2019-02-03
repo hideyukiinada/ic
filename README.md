@@ -16,7 +16,7 @@ I deployed an instance on AWS and it is available for you to check out:
 When you access the above URL, you should see the below screen:
 <IMG src="assets/images/initialscreen.png" height="400px">	
 
-Drag & drop a photo from your file viewer (e.g. Finder) into the rectangular area.  Once the photo is dropped, it automatically uploads the image to my AWS instance for classification.  The result is returned on the same page so there is no need for you to do anything else.  If you want to try classifying more images, just hit the "Clear" button.
+Drag & drop a photo from your file manager (e.g. Finder) into the rectangular area.  Once the photo is dropped, it automatically uploads the image to my AWS instance for classification.  The result is returned on the same page so there is no need for you to do anything else.  If you want to try classifying more images, just hit the "Clear" button.
 
 # Code
 Entire code is checked in [https://github.com/hideyukiinada/ic/tree/master/web_app](https://github.com/hideyukiinada/ic/tree/master/web_app)
