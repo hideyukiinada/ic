@@ -1,4 +1,4 @@
-# Image Classification using Resnet50 pre-trained weight and web frontend
+# Image Classification using ResNet50 pre-trained weight and web frontend
 By Hide Inada
 
 If you are a photographer, you may have seen AI-enabled auto-classification for tagging a photo when you upload a photo to a stock photo agency.
