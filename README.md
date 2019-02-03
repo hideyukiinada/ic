@@ -8,6 +8,7 @@ ResNet50 model with pre-trained weights has 74.9% accuracy according to [a Keras
 
 ## Deployed Instance
 I deployed an instance on AWS and it is available for you to check out:
+
 [http://ec2-3-83-93-180.compute-1.amazonaws.com:5000/](http://ec2-3-83-93-180.compute-1.amazonaws.com:5000/)
 
 ## Samples of images
