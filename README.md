@@ -6,6 +6,10 @@ If you want to build a basic version of classification, you can do it with very 
 I implemented an image classification that classifies a photo into 1000 classes. I used ResNet50 as the ML backend with pre-trained weights and used Flask as the web frontend.
 ResNet50 model with pre-trained weights has 74.9% accuracy according to [a Keras's web page](https://keras.io/applications/) for predicting the top 1 object in a photo.
 
+## Deployed Instance
+I deployed an instance on AWS and it is available for you to check out:
+[http://ec2-3-83-93-180.compute-1.amazonaws.com:5000/](http://ec2-3-83-93-180.compute-1.amazonaws.com:5000/)
+
 ## Samples of images
 I used the photos from my portfolio to test how the classifier classifies my photos.
 
