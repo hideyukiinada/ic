@@ -7,20 +7,20 @@ If you want to build a basic version of AI image classification system using the
 I implemented one that classifies a photo into 1000 classes. I used ResNet50 as the ML backend with pre-trained weights and used Flask as the web frontend.
 ResNet50 model with pre-trained weights has 74.9% accuracy according to [a Keras's web page](https://keras.io/applications/) for predicting the top 1 object in a photo.
 
-To test the performance of the system, I ran the photos that I took by the system to see how it classifies. Please see the result at the end of this article.
+To test the performance of the system, I ran sample photos by the system to see how it classifies. Please see the result at the end of this article.
 
 ## Deployed Instance
 I deployed an instance on AWS and it is available for you to check out:
 
 [http://ec2-3-83-93-180.compute-1.amazonaws.com:5000/](http://ec2-3-83-93-180.compute-1.amazonaws.com:5000/)
 
-# How to use the deployed instance
+### How to use the deployed instance
 When you access the above URL, you should see the below screen:
 <IMG src="assets/images/initialscreen.png" height="400px">	
 
 Drag & drop a photo from your file manager (e.g. Finder) into the rectangular area.  Once the photo is dropped, it automatically uploads the image to my AWS instance for classification.  The result is returned on the same page so there is no need for you to do anything else.  If you want to try classifying more images, just hit the "Clear" button.
 
-# Code
+## Code
 Entire code is checked in [https://github.com/hideyukiinada/ic/tree/master/web_app](https://github.com/hideyukiinada/ic/tree/master/web_app)
 
 The key part of the code is where it loads the ResNet50 model and predicts classes:
@@ -28,7 +28,7 @@ The key part of the code is where it loads the ResNet50 model and predicts class
 
 The code is so short, and you may think "is this it?" ;-)
 
-## Samples of images
+## Accuracy assessment with samples images
 I used the photos from my portfolio to test how the classifier classifies my photos.
 
 ### Success cases
