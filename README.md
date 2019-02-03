@@ -2,7 +2,7 @@
 By Hide Inada
 
 If you are a photographer, you may have seen AI-enabled auto-classification for tagging a photo when you upload a photo to a stock photo agency.
-If you want to build a basic version of AI image classification system using the classes contained in pretrained weights, you can do it with very little code.
+If you want to build a basic version of an AI image classification system using the classes contained in pretrained weights, you can do it with very little code.
 
 I implemented one that classifies a photo into 1000 classes. I used ResNet50 as the ML backend with pre-trained weights and used Flask as the web frontend.
 ResNet50 model with pre-trained weights has 74.9% accuracy according to [a Keras's web page](https://keras.io/applications/) for predicting the top 1 object in a photo.
@@ -52,7 +52,7 @@ correctly because you can see the other side of the river, which would not be th
 
 <IMG src="assets/images/river.png" height="400px">
 
-The below picture has a flower, but the flower does not appear in the top 3. The vase does not have a narrow neck like a goblet, so the goblet is not right. Beaker would be wider than this. It still lists a vase on #3, so there is some hope.
+The below picture has a flower, but the flower does not appear in the top 3. The vase does not have a narrow stem like a goblet, so the goblet is not right. A beaker would be wider than this. It still lists a vase on #3, so there is some hope.
 
 <IMG src="assets/images/flowervase.png" height="400px">
 
