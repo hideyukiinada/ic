@@ -43,6 +43,7 @@ Classification for exotic animals and some household items worked well:
 <IMG src="assets/images/toilet.png" height="400px">  
 
 ### Borderline case
+The below sign is a street sign, but a human would have classified this as a speed limit sign.
 <IMG src="assets/images/speedlimitsign.png" height="400px">
 
 ### Incorrect cases
