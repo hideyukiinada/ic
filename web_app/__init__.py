@@ -64,8 +64,6 @@ def upload_image():
     output: json data
         JSON dictionary containing list of top 3 names and probability for each name.
     """
-    enable_saving_tmp_file = False # Save color-converted grayscale file
-
     image_file = request.files['file']
     log.debug(image_file)
 
@@ -82,13 +80,6 @@ def upload_image():
         pil_img = pil_img.reshape((1, IMAGE_HEIGHT, IMAGE_WIDTH, 1))
         pil_img = np.repeat(pil_img, 3, axis = 3)
 
-        if enable_saving_tmp_file:
-            tmp_img = pil_img.reshape((IMAGE_HEIGHT, IMAGE_WIDTH, 3))
-            tmp_pil_img = Image.fromarray(tmp_img)
-            tmp_pil_image_path = str(image_path.stem) + "_color_converted_" + str(image_path.suffix)
-            tmp_pil_img.save(tmp_pil_image_path)
-            log.info("saved: " + tmp_pil_image_path)
-
     pil_img = pil_img.reshape((1, IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_CHANNELS))
 
     with tf_default_graph.as_default():
@@ -97,6 +88,9 @@ def upload_image():
         top3 = tensorflow.keras.applications.resnet50.decode_predictions(y_hat, top=3)[0]
         names = list(map(lambda e: e[1], top3))
         probs = list(map(lambda e: str(round(e[2] * 100, 1)) + "%", top3))
+
+    log.info("Removing the uploaded image file: %s" % (image_path))
+    image_path.unlink() # Remove the file
 
     return jsonify({
         "name": names,
